@@ -1,11 +1,15 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Helmet } from "react-helmet";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
+import { AuthContext } from "../Providers/AuthProvider";
+import { updateProfile } from "firebase/auth";
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Register = () => {
-
+    const {createUser, auth} = useContext(AuthContext);
     const [show, setShow] = useState(false);
     const handleRegister = e => {
         e.preventDefault();
