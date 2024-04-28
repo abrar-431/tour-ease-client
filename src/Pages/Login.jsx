@@ -47,7 +47,7 @@ const Login = () => {
     return (
         <div className="">
             <Helmet>
-                <title>Luxury Haven | Login</title>
+                <title>Tour Ease | Login</title>
             </Helmet>
             <div className="">
                 <h1 className="md:text-2xl text-xl font-bold mb-4 text-center">Login now!</h1>

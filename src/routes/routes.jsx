@@ -7,11 +7,13 @@ import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import AllTourist from "../Components/AllTourist";
 import AddTourist from "../Components/AddTourist";
+import Error from "../Pages/Error";
 
   const router = createBrowserRouter([
     {
       path: "/",
       element: <Root></Root>,
+      errorElement: <Error></Error>,
       children:[
         {
           path: '/',

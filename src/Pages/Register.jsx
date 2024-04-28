@@ -56,7 +56,7 @@ const Register = () => {
                 </title>
             </Helmet>
             <h1 className="text-2xl font-bold text-center my-4">Please Register</h1>
-            <form onSubmit={handleRegister} className="card-body w-3/5 mx-auto">
+            <form onSubmit={handleRegister} className="card-body md:w-3/5 w-full mx-auto">
                 <div className="form-control">
                     <label className="label">
                         <span className="label-text">Name</span>

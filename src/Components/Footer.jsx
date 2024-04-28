@@ -15,7 +15,7 @@ const Footer = () => {
                 </div>
             </nav>
             <aside>
-                <p>Copyright © 2024 - All right reserved by Luxury Haven</p>
+                <p>Copyright © 2024 - All right reserved by Tour Ease</p>
             </aside>
         </footer>
     );
