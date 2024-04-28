@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { FaGithub, FaGoogle } from "react-icons/fa";
-import { Link} from "react-router-dom";
+import { Link, useLocation, useNavigate} from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from "../Providers/AuthProvider";
@@ -8,6 +8,10 @@ import { Helmet } from "react-helmet";
 
 const Login = () => {
     const {signInUser, googleSignIn, githubSignIn} = useContext(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
+    console.log(location)
+
     const handleLogin = e =>{
         e.preventDefault();
         const email = e.target.email.value;
@@ -16,6 +20,7 @@ const Login = () => {
         .then(res => {
             console.log(res.user);
             toast('Successful Login');
+            navigate(location?.state ? location.state.pathname : '/')
         })
         .catch(error=> {
             console.error(error.message);
@@ -27,6 +32,7 @@ const Login = () => {
         .then(res=>{
             console.log(res.user);
             toast('Successful Login');
+            navigate(location?.state ? location.state.pathname : '/')
         })
         .catch(error=> {
             console.error(error.message);
@@ -38,6 +44,7 @@ const Login = () => {
         .then(res=>{
             console.log(res.user);
             toast('Successful Login');
+            navigate(location?.state ? location.state.pathname : '/')
         })
         .catch(error=> {
             console.error(error.message);
