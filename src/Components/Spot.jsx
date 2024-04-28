@@ -4,7 +4,7 @@ import { FaRegCalendarTimes } from "react-icons/fa";
 import { FaPeoplePulling } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
 const Spot = ({touristSpot}) => {
-    const {image, spot, cost, visitors, time, seasonality} = touristSpot;
+    const {_id, image, spot, cost, visitors, time, seasonality} = touristSpot;
     return (
         <div className='border-gray-200 border-2 p-4 rounded-xl flex flex-col'>
             <div className='flex-grow'>
@@ -20,13 +20,13 @@ const Spot = ({touristSpot}) => {
                         <FaRegCalendarTimes className='text-lg mr-2'></FaRegCalendarTimes>
                         <p>{time}</p>
                     </div>
-                    <div className='flex items-center'>
-                        <FaPeoplePulling className='text-lg mr-2'></FaPeoplePulling>
-                        <p>{visitors}</p>
-                    </div>
                 </div>
+                <div className='flex items-center'>
+                        <FaPeoplePulling className='text-lg mr-2'></FaPeoplePulling>
+                        <p>Visitors per year: {visitors}</p>
+                    </div>
                 <div className='text-center mt-5'>
-                    <Link><button className='btn btn-accent text-white'>View Details</button></Link>
+                    <Link to={`/spots/${_id}`}><button className='btn btn-accent text-white'>View Details</button></Link>
                 </div>
             </div>
         </div>

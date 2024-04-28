@@ -8,6 +8,7 @@ import Register from "../Pages/Register";
 import AllTourist from "../Components/AllTourist";
 import AddTourist from "../Components/AddTourist";
 import Error from "../Pages/Error";
+import SpotDetails from "../Components/SpotDetails";
 
   const router = createBrowserRouter([
     {
@@ -35,6 +36,11 @@ import Error from "../Pages/Error";
         {
           path: '/addtouristspot',
           element: <AddTourist></AddTourist>
+        },
+        {
+          path: '/spots/:id',
+          element: <SpotDetails></SpotDetails>,
+          loader: ({params})=> fetch(`http://localhost:5000/spots/${params.id}`)
         }
       ]
     },
