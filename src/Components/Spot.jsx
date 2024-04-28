@@ -14,7 +14,7 @@ const Spot = ({touristSpot}) => {
                 <div className='my-4 flex justify-between'>
                     <div className='flex items-center'>
                         <FaMoneyCheckDollar className='text-lg mr-2'></FaMoneyCheckDollar>
-                        <p>{cost}</p>
+                        <p>$ {cost}</p>
                     </div>
                     <div className='flex items-center'>
                         <FaRegCalendarTimes className='text-lg mr-2'></FaRegCalendarTimes>

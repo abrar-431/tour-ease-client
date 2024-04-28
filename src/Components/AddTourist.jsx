@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { ToastContainer, toast } from "react-toastify";
@@ -38,7 +39,10 @@ const AddTourist = () => {
     }
     return (
         <div>
-            <h2 className="text-2xl font-bold text-center mt-10">Add Tourist Spots</h2>
+            <Helmet>
+                <title>Tour Ease | Add Tourist Spot</title>
+            </Helmet>
+            <h2 className="text-2xl font-bold text-center mt-10">Add Tourist Spot</h2>
             <p className="text-center w-2/3 mx-auto my-5">Use this Form to Share Your Must-See Tourist Spots and Inspire Fellow Travelers on Their Next Adventure!</p>
             <div className="flex gap-6">
                 <div className="w-1/3">

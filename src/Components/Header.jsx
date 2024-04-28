@@ -4,7 +4,6 @@ import { AuthContext } from "../Providers/AuthProvider";
 
 const Header = () => {
     const { users, logOut } = useContext(AuthContext);
-    console.log(users)
     const handleSignOut = () =>{
         logOut()
         .then()
@@ -15,6 +14,7 @@ const Header = () => {
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/alltouristspots">All Tourist Spots</NavLink></li>
         <li><NavLink to="/addtouristspot">Add Tourist Spot</NavLink></li>
+        <li><NavLink to="/mylist">My List</NavLink></li>
         {
             users ?
                 <div className="flex md:flex-row flex-col items-center gap-4">

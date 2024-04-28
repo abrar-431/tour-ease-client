@@ -10,7 +10,6 @@ const Login = () => {
     const {signInUser, googleSignIn, githubSignIn} = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
-    console.log(location)
 
     const handleLogin = e =>{
         e.preventDefault();
@@ -20,7 +19,7 @@ const Login = () => {
         .then(res => {
             console.log(res.user);
             toast('Successful Login');
-            navigate(location?.state ? location.state.pathname : '/')
+            navigate(location?.state ? location.state : '/')
         })
         .catch(error=> {
             console.error(error.message);
@@ -32,7 +31,7 @@ const Login = () => {
         .then(res=>{
             console.log(res.user);
             toast('Successful Login');
-            navigate(location?.state ? location.state.pathname : '/')
+            navigate(location?.state ? location.state : '/')
         })
         .catch(error=> {
             console.error(error.message);
@@ -44,7 +43,7 @@ const Login = () => {
         .then(res=>{
             console.log(res.user);
             toast('Successful Login');
-            navigate(location?.state ? location.state.pathname : '/')
+            navigate(location?.state ? location.state : '/')
         })
         .catch(error=> {
             console.error(error.message);

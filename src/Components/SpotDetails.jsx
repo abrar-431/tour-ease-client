@@ -33,7 +33,7 @@ const SpotDetails = () => {
             <div className="mt-4 flex md:flex-row flex-col justify-between">
                 <div className='flex items-center'>
                     <FaMoneyCheckDollar className='text-lg mr-2'></FaMoneyCheckDollar>
-                    <p>{cost}</p>
+                    <p>$ {cost}</p>
                 </div>
                 <div className='flex items-center'>
                     <FaRegCalendarTimes className='text-lg mr-2'></FaRegCalendarTimes>
