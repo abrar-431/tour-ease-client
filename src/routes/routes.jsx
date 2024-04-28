@@ -29,7 +29,8 @@ import Error from "../Pages/Error";
         },
         {
           path: '/alltouristspots',
-          element: <AllTourist></AllTourist>
+          element: <AllTourist></AllTourist>,
+          loader: ()=> fetch('http://localhost:5000/spots'),
         },
         {
           path: '/addtouristspot',
