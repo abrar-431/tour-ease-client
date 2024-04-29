@@ -4,6 +4,7 @@ import Spot from "../Components/Spot";
 import { Fade } from "react-awesome-reveal";
 import Faq from "../Components/Faq";
 import Contact from "../Components/Contact";
+import Countries from "../Components/Countries";
 
 const Home = () => {
     const [spots, setSpots] = useState([]);
@@ -42,6 +43,7 @@ const Home = () => {
                     </Fade>
                 </div>
             </div>
+            <Countries></Countries>
             <Contact></Contact>
             <Faq></Faq>
         </div>
