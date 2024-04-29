@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import Banner from "../Components/Banner";
 import Spot from "../Components/Spot";
 import { Fade } from "react-awesome-reveal";
+import Faq from "../Components/Faq";
+import Contact from "../Components/Contact";
 
 const Home = () => {
     const [spots, setSpots] = useState([]);
@@ -19,7 +21,7 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <div>
+            <div id="spots">
                 <div className="mt-10">
                     <h2 className="text-2xl font-bold text-center">European Escapes: Unforgettable Tourist Spots</h2>
                     <p className="w-4/5 text-center mx-auto mt-3">Embark on a virtual tour through most iconic destinations of Europe. From the romance of Paris to the ancient wonders of Rome, explore breathtaking landmarks and hidden gems that define the essence of European travel.</p>
@@ -40,6 +42,8 @@ const Home = () => {
                     </Fade>
                 </div>
             </div>
+            <Contact></Contact>
+            <Faq></Faq>
         </div>
     );
 };

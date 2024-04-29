@@ -3,9 +3,9 @@ const Footer = () => {
     return (
         <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded w-full mt-5">
             <nav className="grid grid-flow-col gap-4">
-                <a className="link link-hover">About us</a>
-                <a className="link link-hover">Contact</a>
-                <a className="link link-hover">Tourist Spots</a>
+                <a href="#aboutus" className="link link-hover">About us</a>
+                <a href="#contact" className="link link-hover">Contact</a>
+                <a href="#spots" className="link link-hover">Tourist Spots</a>
             </nav>
             <nav>
                 <div className="grid grid-flow-col gap-4">

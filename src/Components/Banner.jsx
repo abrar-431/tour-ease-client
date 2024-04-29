@@ -4,7 +4,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const Banner = () => {
     return (
-        <div>
+        <div id="aboutus">
             <h1 className="text-2xl font-bold text-center">Experience the adventure with Tour Ease and{' '}
                 <span className="text-2xl font-bold text-blue-600">
                     <Typewriter
