@@ -12,6 +12,7 @@ import SpotDetails from "../Components/SpotDetails";
 import PrivateRoute from "./PrivateRoute";
 import MyList from "../Pages/MyList";
 import UpdateSpot from "../Pages/UpdateSpot";
+import CountryDetails from "../Components/CountryDetails";
 
   const router = createBrowserRouter([
     {
@@ -54,6 +55,11 @@ import UpdateSpot from "../Pages/UpdateSpot";
           path: '/update/:id',
           element: <PrivateRoute><UpdateSpot></UpdateSpot></PrivateRoute>,
           loader: ({params})=> fetch(`http://localhost:5000/spots/${params.id}`)
+        },
+        {
+          path: '/countries/:id',
+          element: <CountryDetails></CountryDetails>,
+          loader: ({params})=>fetch(`http://localhost:5000/countries/${params.id}`),
         }
       ]
     },

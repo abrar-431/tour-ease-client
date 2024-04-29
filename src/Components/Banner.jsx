@@ -5,8 +5,8 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 const Banner = () => {
     return (
         <div id="aboutus">
-            <h1 className="text-2xl font-bold text-center">Experience the adventure with Tour Ease and{' '}
-                <span className="text-2xl font-bold text-blue-600">
+            <h1 className="md:text-2xl text-lg font-bold text-center">Experience the adventure with Tour Ease and{' '}
+                <span className="md:text-2xl text-lg font-bold text-blue-600">
                     <Typewriter
                         words={['Enjoy', 'Eat', 'Sleep', 'Tour', 'Wander']}
                         loop={5}
@@ -19,8 +19,8 @@ const Banner = () => {
                     </Typewriter>
                 </span>
             </h1>
-            <p className="my-5 text-center w-1/2 mx-auto">Tour Ease is your ultimate travel companion, simplifying every step of your journey. From seamless bookings to expert recommendations, embark on your adventures with confidence and ease.</p>
-            <div className="w-2/5 mx-auto">
+            <p className="my-5 text-center md:w-1/2 w-full mx-auto">Tour Ease is your ultimate travel companion, simplifying every step of your journey. From seamless bookings to expert recommendations, embark on your adventures with confidence and ease.</p>
+            <div className="md:w-2/5 w-full mx-auto">
             <Carousel>
                 <div>
                     <img className="rounded-lg" src="https://i.ibb.co/6Jxttk6/banner-1.jpg" />
