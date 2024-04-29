@@ -8,7 +8,7 @@ const Spot = ({touristSpot}) => {
     return (
         <div className='border-gray-200 border-2 p-4 rounded-xl flex flex-col'>
             <div className='flex-grow'>
-                <img className='rounded-lg' src={image} alt={spot} />
+                <img className='rounded-lg mx-auto' src={image} alt={spot} />
                 <h2 className="text-2xl font-bold my-3">{spot}</h2>
                 <p>Seasonality: {seasonality}</p>
                 <div className='my-4 flex justify-between'>

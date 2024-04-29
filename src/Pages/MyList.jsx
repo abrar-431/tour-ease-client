@@ -1,17 +1,45 @@
-import {useContext } from "react";
+import {useContext, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
 import { FaEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
+import Swal from "sweetalert2";
 
 
 const MyList = () => {
     const { users } = useContext(AuthContext);
     const loadedSpots = useLoaderData();
-    const spots = loadedSpots.filter(spot => spot.email === users.email);
+    const filteredSpots = loadedSpots.filter(spot => spot.email === users.email);
+    const [spots, setSpots] = useState(filteredSpots);
 
     const handleDelete = id =>{
-        console.log('update on', id)
+      Swal.fire({
+        title: "Are you sure?",
+        text: "You won't be able to revert this!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, delete it!"
+      }).then((result) => {
+        if (result.isConfirmed) {
+          fetch(`http://localhost:5000/spots/${id}`, {
+            method: 'DELETE'
+          })
+          .then(res=>res.json())
+          .then(data=>{
+            if(data.deletedCount > 0){
+              Swal.fire({
+                title: "Deleted!",
+                text: "Your tourist spot has been deleted.",
+                icon: "success"
+              });
+              const remaining = spots.filter(spot=>spot._id!==id);
+              setSpots(remaining);
+            }
+          })
+        }
+      });
     }
 
     return (
