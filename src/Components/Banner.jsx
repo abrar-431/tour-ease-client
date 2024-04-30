@@ -19,7 +19,7 @@ const Banner = () => {
                     </Typewriter>
                 </span>
             </h1>
-            <p className="my-5 text-center md:w-1/2 w-full mx-auto">Tour Ease is your ultimate travel companion, simplifying every step of your journey. From seamless bookings to expert recommendations, embark on your adventures with confidence and ease.</p>
+            <p className="my-5 text-center md:w-4/5 w-full mx-auto">Tour Ease is your ultimate travel companion, simplifying every step of your journey. From seamless bookings to expert recommendations, embark on your adventures with confidence and ease.</p>
             <div className="md:w-2/5 w-full mx-auto">
             <Carousel>
                 <div>
