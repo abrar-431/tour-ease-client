@@ -67,8 +67,8 @@ const Header = () => {
                         </div>
                         :
                         <div className="flex gap-4">
-                            <li><NavLink to="/login">Login</NavLink></li>
-                            <li><NavLink to="/register">Register</NavLink></li>
+                            <li className="btn btn-ghost"><NavLink to="/login">Login</NavLink></li>
+                            <li className="btn btn-ghost"><NavLink to="/register">Register</NavLink></li>
                         </div>
                 }
             </div>

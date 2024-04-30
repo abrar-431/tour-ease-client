@@ -20,7 +20,7 @@ const AllTourist = () => {
             </Helmet>
             <div className="mt-6">
                 <h2 className="text-2xl font-bold text-center">European Escapes: Unforgettable Tourist Spots</h2>
-                <p className="w-4/5 text-center mx-auto mt-3">Embark on a virtual tour through most iconic destinations of Europe. From the romance of Paris to the ancient wonders of Rome, explore breathtaking landmarks and hidden gems that define the essence of European travel.</p>
+                <p className="md:w-4/5 w-full text-center mx-auto mt-3">Embark on a virtual tour through most iconic destinations of Europe. From the romance of Paris to the ancient wonders of Rome, explore breathtaking landmarks and hidden gems that define the essence of European travel.</p>
                 <div className="text-center my-4">
                         <details className="dropdown">
                             <summary className="m-1 btn">Sort</summary>

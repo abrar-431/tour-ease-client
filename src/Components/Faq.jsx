@@ -1,6 +1,9 @@
 
 const Faq = () => {
     return (
+        <div className="my-6">
+            <h2 className="text-2xl font-bold text-center">Frequently Asked Questions (FAQ)</h2>
+                <p className="md:w-4/5 w-full text-center mx-auto mt-3">Find answers to common inquiries about Tour Ease and its features. Whether you are curious about account management, navigating the website, or contributing to our community, we have got you covered with these helpful FAQs.</p>
         <div className=" my-5 space-y-3">
             <div className="collapse collapse-plus bg-base-200">
                 <input type="radio" name="my-accordion-3" defaultChecked />
@@ -56,6 +59,7 @@ const Faq = () => {
                     <p>Absolutely! Many tourists plan multi-spot itineraries to make the most of their European adventure. Use our site to discover nearby attractions, optimize travel routes, and create unforgettable journeys across multiple destinations.</p>
                 </div>
             </div>
+        </div>
         </div>
     );
 };
