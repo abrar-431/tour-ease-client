@@ -9,13 +9,13 @@ import Countries from "../Components/Countries";
 const Home = () => {
     const [spots, setSpots] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/spots')
+        fetch('https://assignment-10-server-nine-ebon.vercel.app/spots')
             .then(res => res.json())
             .then(data => setSpots(data))
     }, [])
 
     const handleSort = () => {
-        fetch('http://localhost:5000/sortedspots')
+        fetch('https://assignment-10-server-nine-ebon.vercel.app/sortedspots')
             .then(res => res.json())
             .then(data => setSpots(data))
     }

@@ -23,7 +23,7 @@ const UpdateSpot = () => {
 
         const updatedTouristSpot = { spot, country, location, cost, seasonality, time, visitors, image, description};
 
-        fetch(`http://localhost:5000/update/${_id}`, {
+        fetch(`https://assignment-10-server-nine-ebon.vercel.app/update/${_id}`, {
             method: 'PUT',
             headers:{
                 'content-type': 'application/json'
@@ -52,44 +52,44 @@ const UpdateSpot = () => {
                 <form onSubmit={handleUpdateTourist} className="bg-slate-700 p-10 rounded-xl">
                     <div className="lg:flex gap-4 mb-10">
                         <div className="lg:w-1/3 w-full">
-                            <label className="font-medium">Tourist Spot Name</label>
+                            <label className="font-medium text-white">Tourist Spot Name</label>
                             <input type="text" defaultValue={spot} placeholder="Tourist Spot Name" name="spot" className="input input-bordered w-full max-w-xs bg-gray-200 mt-2"  required/>
                         </div>
                         <div className="lg:w-1/3 w-full">
-                            <label className="font-medium">Location</label>
+                            <label className="font-medium text-white">Location</label>
                             <input type="text" defaultValue={location} placeholder="Location" name="location" className="input input-bordered w-full max-w-xs bg-gray-200 mt-2"  required/>
                         </div>
                         <div className="lg:w-1/3 w-full">
-                            <label className="font-medium">Average Cost</label>
+                            <label className="font-medium text-white">Average Cost</label>
                             <input type="text" defaultValue={cost} placeholder="Average Cost" name="cost" className="input input-bordered w-full max-w-xs bg-gray-200 mt-2"  required/>
                         </div>
                     </div>
                     <div className="lg:flex gap-4 mb-10">
                         <div className="lg:w-1/3 w-full">
-                            <label className="font-medium">Country Name</label>
+                            <label className="font-medium text-white">Country Name</label>
                             <input type="text" defaultValue={country} placeholder="Country Name" name="country" className="input input-bordered w-full max-w-xs bg-gray-200 mt-2"  required/>
                         </div>
 
                         <div className="lg:w-1/3 w-full">
-                            <label className="font-medium">Image URL</label>
+                            <label className="font-medium text-white">Image URL</label>
                             <input type="text" defaultValue={image} placeholder="Image URL" name="image" className="input input-bordered w-full bg-gray-200 mt-2"  required/>
                         </div>
                         <div className="lg:w-1/3 w-full">
-                            <label className="font-medium">Short Description</label>
+                            <label className="font-medium text-white">Short Description</label>
                             <input type="text" defaultValue={description} placeholder="Short Description" name="description" className="input input-bordered w-full bg-gray-200 mt-2"  required/>
                         </div>
                     </div>
                     <div className="lg:flex gap-4 mb-10">
                         <div className="lg:w-1/3 w-full">
-                            <label className="font-medium">Seasonality</label>
+                            <label className="font-medium text-white">Seasonality</label>
                             <input type="text" defaultValue={seasonality} placeholder="Seasonality" name="seasonality" className="input input-bordered w-full max-w-xs bg-gray-200 mt-2"  required/>
                         </div>
                         <div className="lg:w-1/3 w-full">
-                            <label className="font-medium">Travel Time</label>
+                            <label className="font-medium text-white">Travel Time</label>
                             <input type="text" defaultValue={time} placeholder="Travel Time" name="time" className="input input-bordered w-full max-w-xs bg-gray-200 mt-2"  required/>
                         </div>
                         <div className="lg:w-1/3 w-full">
-                            <label className="font-medium">Total Visitors Per Year</label>
+                            <label className="font-medium text-white">Total Visitors Per Year</label>
                             <input type="text" defaultValue={visitors} placeholder="Total Visitors Per Year" name="visitors" className="input input-bordered w-full max-w-xs bg-gray-200 mt-2"  required/>
                         </div>
                     </div>

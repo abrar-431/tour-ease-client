@@ -10,7 +10,7 @@ const CountryDetails = () => {
     const country = useLoaderData();
     const [spots, setSpots] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/spots')
+        fetch('https://assignment-10-server-nine-ebon.vercel.app/spots')
             .then(res => res.json())
             .then(data => setSpots(data))
     }, [])

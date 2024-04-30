@@ -21,7 +21,7 @@ const AddTourist = () => {
         const description = form.description.value;
 
         const touristSpot = {name, email, spot, country, location, cost, seasonality, time, visitors, image, description};
-        fetch('http://localhost:5000/spots', {
+        fetch('https://assignment-10-server-nine-ebon.vercel.app/spots', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -68,54 +68,54 @@ const AddTourist = () => {
                 <form onSubmit={handleAddTourist} className="bg-slate-700 p-10 rounded-xl">
                     <div className="flex lg:flex-row flex-col gap-4 mb-10">
                         <div className="lg:w-1/3 w-full">
-                            <label className="font-medium">User Name</label>
+                            <label className="font-medium text-white">User Name</label>
                             <input type="text" placeholder="User Name" name="name" className="input input-bordered w-full max-w-xs bg-gray-200 mt-2" required/>
                         </div>
                         <div className="lg:w-1/3 w-full">
-                            <label className="font-medium">User Email</label>
+                            <label className="font-medium text-white">User Email</label>
                             <input type="text" placeholder="User Email" name="email" className="input input-bordered w-full max-w-xs bg-gray-200 mt-2"  required/>
                         </div>
                         <div className="lg:w-1/3 w-full">
-                            <label className="font-medium">Tourist Spot Name</label>
+                            <label className="font-medium text-white">Tourist Spot Name</label>
                             <input type="text" placeholder="Tourist Spot Name" name="spot" className="input input-bordered w-full max-w-xs bg-gray-200 mt-2"  required/>
                         </div>
 
                     </div>
                     <div className="flex lg:flex-row flex-col gap-4 mb-10">
                         <div className="lg:w-1/3 w-full">
-                            <label className="font-medium">Country Name</label>
+                            <label className="font-medium text-white">Country Name</label>
                             <input type="text" placeholder="Country Name" name="country" className="input input-bordered w-full max-w-xs bg-gray-200 mt-2"  required/>
                         </div>
                         <div className="lg:w-1/3 w-full">
-                            <label className="font-medium">Location</label>
+                            <label className="font-medium text-white">Location</label>
                             <input type="text" placeholder="Location" name="location" className="input input-bordered w-full max-w-xs bg-gray-200 mt-2"  required/>
                         </div>
                         <div className="lg:w-1/3 w-full">
-                            <label className="font-medium">Average Cost</label>
+                            <label className="font-medium text-white">Average Cost</label>
                             <input type="text" placeholder="Average Cost" name="cost" className="input input-bordered w-full max-w-xs bg-gray-200 mt-2"  required/>
                         </div>
                     </div>
                     <div className="flex lg:flex-row flex-col gap-4 mb-10">
                         <div className="lg:w-1/3 w-full">
-                            <label className="font-medium">Seasonality</label>
+                            <label className="font-medium text-white">Seasonality</label>
                             <input type="text" placeholder="Seasonality" name="seasonality" className="input input-bordered w-full max-w-xs bg-gray-200 mt-2"  required/>
                         </div>
                         <div className="lg:w-1/3 w-full">
-                            <label className="font-medium">Travel Time</label>
+                            <label className="font-medium text-white">Travel Time</label>
                             <input type="text" placeholder="Travel Time" name="time" className="input input-bordered w-full max-w-xs bg-gray-200 mt-2"  required/>
                         </div>
                         <div className="lg:w-1/3 w-full">
-                            <label className="font-medium">Total Visitors Per Year</label>
+                            <label className="font-medium text-white">Total Visitors Per Year</label>
                             <input type="text" placeholder="Total Visitors Per Year" name="visitors" className="input input-bordered w-full max-w-xs bg-gray-200 mt-2"  required/>
                         </div>
                     </div>
                     <div className="flex lg:flex-row flex-col gap-6 mb-10">
                         <div className="lg:w-1/2 w-full">
-                            <label className="font-medium">Image URL</label>
+                            <label className="font-medium text-white">Image URL</label>
                             <input type="text" placeholder="Image URL" name="image" className="input input-bordered w-full bg-gray-200 mt-2"  required/>
                         </div>
                         <div className="lg:w-1/2 w-full">
-                            <label className="font-medium">Short Description</label>
+                            <label className="font-medium text-white">Short Description</label>
                             <input type="text" placeholder="Short Description" name="description" className="input input-bordered w-full bg-gray-200 mt-2"  required/>
                         </div>
                     </div>

@@ -35,7 +35,7 @@ import CountryDetails from "../Components/CountryDetails";
         {
           path: '/alltouristspots',
           element: <AllTourist></AllTourist>,
-          loader: ()=> fetch('http://localhost:5000/spots'),
+          loader: ()=> fetch('https://assignment-10-server-nine-ebon.vercel.app/spots'),
         },
         {
           path: '/addtouristspot',
@@ -44,22 +44,22 @@ import CountryDetails from "../Components/CountryDetails";
         {
           path: '/spots/:id',
           element: <PrivateRoute><SpotDetails></SpotDetails></PrivateRoute>,
-          loader: ({params})=> fetch(`http://localhost:5000/spots/${params.id}`)
+          loader: ({params})=> fetch(`https://assignment-10-server-nine-ebon.vercel.app/spots/${params.id}`)
         },
         {
           path: '/mylist',
           element: <PrivateRoute><MyList></MyList></PrivateRoute>,
-          loader: ()=> fetch('http://localhost:5000/spots'),
+          loader: ()=> fetch('https://assignment-10-server-nine-ebon.vercel.app/spots'),
         },
         {
           path: '/update/:id',
           element: <PrivateRoute><UpdateSpot></UpdateSpot></PrivateRoute>,
-          loader: ({params})=> fetch(`http://localhost:5000/spots/${params.id}`)
+          loader: ({params})=> fetch(`https://assignment-10-server-nine-ebon.vercel.app/spots/${params.id}`)
         },
         {
           path: '/countries/:id',
           element: <CountryDetails></CountryDetails>,
-          loader: ({params})=>fetch(`http://localhost:5000/countries/${params.id}`),
+          loader: ({params})=>fetch(`https://assignment-10-server-nine-ebon.vercel.app/countries/${params.id}`),
         }
       ]
     },

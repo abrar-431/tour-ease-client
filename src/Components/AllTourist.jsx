@@ -9,7 +9,7 @@ const AllTourist = () => {
     const loadedSpots = useLoaderData();
     const [spots, setSpots] = useState(loadedSpots);
     const handleSort = () => {
-        fetch('http://localhost:5000/sortedspots')
+        fetch('https://assignment-10-server-nine-ebon.vercel.app/sortedspots')
             .then(res => res.json())
             .then(data => setSpots(data))
     }

@@ -5,7 +5,7 @@ import Country from "./Country";
 const Countries = () => {
     const [countries, setCountries] = useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/countries')
+        fetch('https://assignment-10-server-nine-ebon.vercel.app/countries')
         .then(res=>res.json())
         .then(data=>setCountries(data))
     },[])
