@@ -1,54 +1,61 @@
 import { useContext } from "react";
 import { FaGithub, FaGoogle } from "react-icons/fa";
-import { Link, useLocation, useNavigate} from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import { AuthContext } from "../Providers/AuthProvider";
 import { Helmet } from "react-helmet";
+import axios from "axios";
 
 const Login = () => {
-    const {signInUser, googleSignIn, githubSignIn} = useContext(AuthContext);
+    const { signInUser, googleSignIn, githubSignIn } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
 
-    const handleLogin = e =>{
+    const handleLogin = e => {
         e.preventDefault();
         const email = e.target.email.value;
         const password = e.target.password.value;
         signInUser(email, password)
-        .then(res => {
-            console.log(res.user);
-            toast('Successful Login');
-            navigate(location?.state ? location.state : '/')
-        })
-        .catch(error=> {
-            console.error(error.message);
-            toast.error('You have entered wrong email or password');
-        })
+            .then(res => {
+                console.log(res.user);
+                toast('Successful Login');
+                const user = { email };
+                axios.post('http://localhost:5000/jwt', user, { withCredentials: true })
+                    .then(res => {
+                        console.log(res.data)
+                        navigate(location?.state ? location.state : '/')
+                    }
+                    )
+            })
+            .catch(error => {
+                console.error(error.message);
+                toast.error('You have entered wrong email or password');
+            })
     }
-    const handleGoogleSignIn = () =>{
+    const handleGoogleSignIn = () => {
         googleSignIn()
-        .then(res=>{
-            console.log(res.user);
-            toast('Successful Login');
-            navigate(location?.state ? location.state : '/')
-        })
-        .catch(error=> {
-            console.error(error.message);
-            toast.error('You have entered wrong email or password');
-        })
+            .then(res => {
+                console.log(res.user);
+                toast('Successful Login');
+                navigate(location?.state ? location.state : '/')
+            })
+            .catch(error => {
+                console.error(error.message);
+                toast.error('You have entered wrong email or password');
+            })
     }
-    const handleGithubSignIn = () =>{
+    const handleGithubSignIn = () => {
         githubSignIn()
-        .then(res=>{
-            console.log(res.user);
-            toast('Successful Login');
-            navigate(location?.state ? location.state : '/')
-        })
-        .catch(error=> {
-            console.error(error.message);
-            toast.error('You have entered wrong email or password');
-        })
+            .then(res => {
+                console.log(res.user);
+                toast('Successful Login');
+                navigate(location?.state ? location.state : '/')
+            })
+            .catch(error => {
+                console.error(error.message);
+                toast.error('You have entered wrong email or password');
+            })
     }
     return (
         <div className="">
@@ -84,7 +91,7 @@ const Login = () => {
                     <p className="mb-6 mx-6">Do not have an account? Please <Link className="font-bold text-blue-600" to="/register">Register</Link></p>
                 </div>
             </div>
-            <ToastContainer/>
+            <ToastContainer />
         </div>
     );
 };
