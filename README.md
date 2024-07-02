@@ -1,20 +1,51 @@
-# Tour Ease
 
-Welcome to Tour Ease - Your Ultimate Tourism Management Website!
+## Live Site
 
-Visit the live site: https://tourism-manager-6b4fe.web.app/
+[Tour Ease](https://tourism-manager-6b4fe.web.app)
 
-Featured Category: Europe
 
-•Navbar: Navigate seamlessly with our user-friendly navbar, offering easy access to essential features like Home, All Tourist Spots, Add Tourist Spot, My List, and account management options.
-•Login & Register Pages: Securely authenticate your identity and access exclusive features with our password and email-based authentication system. Choose from multiple login options, including Google, GitHub, Facebook, or Twitter.
-•Home Page: Discover Europe's wonders through captivating sections like Banner, Tourist Spots, Countries, Extra Sections, and Footer, all thoughtfully designed to enhance your browsing experience.
-•Add Tourist Spot Page: Contribute to our ever-growing database by adding your favorite European tourist spots. Fill out the form with essential details, and watch your entry come to life on our platform.
-•All Tourist Spots Page: Explore a comprehensive list of European tourist spots curated by travelers like you. Sort by average cost to find the perfect destination for your budget, and delve into each spot's details with just a click.
-•View Details Page: Dive deeper into your favorite European tourist spots with detailed information stored in our database. From picturesque locations to seasonal highlights, get ready to plan your next European getaway with confidence.
-•My List Page: Keep track of your European adventures with ease. View, update, or delete your added tourist spots in a user-friendly tabular format, ensuring your personalized travel itinerary is always up to date.
-•Theme: You can toggle between light and dark theme
+# Project Overview
 
-Additional Packages Used:
-•React-simple-typewriter: I have used this package in the heading of banner section.
-•React Awesome Reveal: I have used this package in the tourist spots and countries section.
+Tour Ease - Your Ultimate Tourism Management Website. Tour Ease addresses the need for a centralized, user-friendly platform to manage and explore European tourist destinations. Traditional methods of gathering travel information can be fragmented and time-consuming, often requiring extensive research across multiple sources. Tour Ease streamlines this process by offering a comprehensive solution where users can discover, contribute, and organize travel information all in one place.
+
+
+# Key Features
+
+• Comprehensive Tourist Spot Management:  Browse an extensive list of European tourist spots, sortable by average cost and detailed with essential information to help you plan your trip. Each spot is contributed by fellow travelers, offering diverse insights and recommendations.
+
+
+• User-Generated Content: Empower users to contribute to the platform by adding their favorite European tourist spots. The easy-to-use form allows users to input essential details, enriching the database with diverse and unique travel destinations.
+
+• Personalized Travel Planning: Keep track of your European travel plans with a personalized list. Users can view, update, or delete their added tourist spots in a tabular format, making it simple to manage and refine their travel itinerary.
+## Technologies Used
+
+**Client:** React, TailwindCSS, HTML
+
+**Server:** Node, Express
+
+**Database**: MongoDB
+
+**Authentication**: Firebase
+
+
+## Installation
+
+Run the below commands in your computer to run this project
+
+```bash
+  npm install
+  npm run dev
+```
+    
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file
+
+`VITE_APIKEY`
+`VITE_AUTHDOMAIN`
+`VITE_PROJECTID`
+`VITE_STORAGEBUCKET`
+`VITE_MESSAGINGSENDERID`
+`VITE_APPID`
+`VITE_IMAGE_HOSTING_KEY`
+
